@@ -1,0 +1,17 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.GUIS.cpp.obj": [
+			"GUIS.cpp.obj",
+			"Inventory.cpp.obj",
+			"ItemBase.cpp.obj",
+			"ItemMaster.cpp.obj"
+		],
+		"Module.GUIS.gen.cpp.obj": [
+			"GUIS.init.gen.cpp.obj",
+			"Inventory.gen.cpp.obj",
+			"ItemBase.gen.cpp.obj",
+			"ItemMaster.gen.cpp.obj"
+		]
+	}
+}

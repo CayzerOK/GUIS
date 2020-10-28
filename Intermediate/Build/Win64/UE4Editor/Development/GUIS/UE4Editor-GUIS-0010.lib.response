@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-GUIS-0010.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\WorkSpace\Unreal\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.cpp.obj"
+"D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.gen.cpp.obj"
+"D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Default.rc2.res"
+/OUT:"D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\UE4Editor-GUIS-0010.lib"
+/INCLUDE:IMPLEMENT_MODULE_GUIS
