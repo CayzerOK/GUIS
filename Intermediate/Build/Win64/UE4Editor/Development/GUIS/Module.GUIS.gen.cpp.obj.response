@@ -32,7 +32,7 @@
 /wd4244
 /wd4838
 /I .
-/I D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Source\GUIS\Private
+/I C:\THProject\Plugins\GUIS\Source\GUIS\Private
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime
 /I Runtime\CoreUObject\Public
@@ -231,9 +231,9 @@
 /I Runtime\Experimental\GeometryCollectionSimulationCore\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Inc\GUIS
-/I D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Source
-/I D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Source\GUIS\Public
+/I C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Inc\GUIS
+/I C:\THProject\Plugins\GUIS\Source
+/I C:\THProject\Plugins\GUIS\Source\GUIS\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -263,12 +263,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"D:\WorkSpace\Unreal\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"D:\WorkSpace\Unreal\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\WorkSpace\Unreal\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.gen.cpp"
-/FI"D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Definitions.GUIS.h"
-/Fo"D:\WorkSpace\Unreal\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.gen.cpp.obj"
+/FI"C:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"C:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"C:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.gen.cpp"
+/FI"C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Definitions.GUIS.h"
+/Fo"C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.gen.cpp.obj"
 /TP
 /GR-
 /W4
