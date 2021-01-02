@@ -25,7 +25,8 @@ public class GUIS : ModuleRules
             new[]
             {
                 "Core",
-                "Projects"
+                "Projects",
+                "NumbskullSerialization"
             }
         );
 
@@ -36,7 +37,8 @@ public class GUIS : ModuleRules
                 "CoreUObject",
                 "Engine",
                 "Slate",
-                "SlateCore"
+                "SlateCore",
+                "NumbskullSerialization"
             }
         );
 

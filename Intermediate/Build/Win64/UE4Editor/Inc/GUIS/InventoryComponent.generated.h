@@ -32,8 +32,12 @@ template<> GUIS_API UScriptStruct* StaticStruct<struct FItemSlot>();
 
 #define THProject_Plugins_GUIS_Source_GUIS_Public_InventoryComponent_h_46_SPARSE_DATA
 #define THProject_Plugins_GUIS_Source_GUIS_Public_InventoryComponent_h_46_RPC_WRAPPERS \
+	virtual void ItemRemoved_Implementation(UItemBase* Item, int32 Amount); \
+	virtual void ItemAdded_Implementation(UItemBase* Item, int32 Amount); \
 	virtual bool CanAccept_Implementation(UItemBase* Item, int32 Amount); \
  \
+	DECLARE_FUNCTION(execItemRemoved); \
+	DECLARE_FUNCTION(execItemAdded); \
 	DECLARE_FUNCTION(execCanAccept); \
 	DECLARE_FUNCTION(execIsContain); \
 	DECLARE_FUNCTION(execTransactTo); \
@@ -43,8 +47,12 @@ template<> GUIS_API UScriptStruct* StaticStruct<struct FItemSlot>();
 
 
 #define THProject_Plugins_GUIS_Source_GUIS_Public_InventoryComponent_h_46_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void ItemRemoved_Implementation(UItemBase* Item, int32 Amount); \
+	virtual void ItemAdded_Implementation(UItemBase* Item, int32 Amount); \
 	virtual bool CanAccept_Implementation(UItemBase* Item, int32 Amount); \
  \
+	DECLARE_FUNCTION(execItemRemoved); \
+	DECLARE_FUNCTION(execItemAdded); \
 	DECLARE_FUNCTION(execCanAccept); \
 	DECLARE_FUNCTION(execIsContain); \
 	DECLARE_FUNCTION(execTransactTo); \
@@ -65,6 +73,16 @@ template<> GUIS_API UScriptStruct* StaticStruct<struct FItemSlot>();
 			: ReturnValue(false) \
 		{ \
 		} \
+	}; \
+	struct InventoryComponent_eventItemAdded_Parms \
+	{ \
+		UItemBase* Item; \
+		int32 Amount; \
+	}; \
+	struct InventoryComponent_eventItemRemoved_Parms \
+	{ \
+		UItemBase* Item; \
+		int32 Amount; \
 	};
 
 

@@ -50,7 +50,11 @@ private:
     void SetProp(FProperty* Property, void* Dest, FItemInnerProperty NewValue);
 
 public:
+    UPROPERTY(SaveGame)
     uint32 ItemID = 0;
+    
+    UPROPERTY(SaveGame)
+    uint32 Count = 0;
 
     UFUNCTION()
     bool LoadData(TMap<FString, FItemInnerProperty> PropMap);

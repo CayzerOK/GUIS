@@ -32,7 +32,7 @@
 /wd4244
 /wd4838
 /I .
-/I C:\THProject\Plugins\GUIS\Source\GUIS\Private
+/I F:\THProject\Plugins\GUIS\Source\GUIS\Private
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime
 /I Runtime\CoreUObject\Public
@@ -231,9 +231,12 @@
 /I Runtime\Experimental\GeometryCollectionSimulationCore\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Inc\GUIS
-/I C:\THProject\Plugins\GUIS\Source
-/I C:\THProject\Plugins\GUIS\Source\GUIS\Public
+/I F:\THProject\Plugins\NumbskullSerialization\Intermediate\Build\Win64\UE4Editor\Inc\NumbskullSerialization
+/I F:\THProject\Plugins\NumbskullSerialization\Source
+/I F:\THProject\Plugins\NumbskullSerialization\Source\NumbskullSerialization\Public
+/I F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Inc\GUIS
+/I F:\THProject\Plugins\GUIS\Source
+/I F:\THProject\Plugins\GUIS\Source\GUIS\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -257,18 +260,18 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
-/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\INCLUDE"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29333\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"C:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"C:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\THProject\Plugins\GUIS\Source\GUIS\Private\InventorySubsystem.cpp"
-/FI"C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Definitions.GUIS.h"
-/Fo"C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\InventorySubsystem.cpp.obj"
+/FI"F:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"F:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"F:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"F:\THProject\Plugins\GUIS\Source\GUIS\Private\InventorySubsystem.cpp"
+/FI"F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Definitions.GUIS.h"
+/Fo"F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\InventorySubsystem.cpp.obj"
 /TP
 /GR-
 /W4

@@ -18,6 +18,7 @@ bool UItemBase::LoadData(TMap<FString, FItemInnerProperty> PropMap)
             SetProp(*PropIt, Dest, NewValue);
         }
     }
+    
     return true;
 }
 
@@ -36,68 +37,65 @@ void UItemBase::SetProp(FProperty* Property, void* ValuePtr, FItemInnerProperty 
     }
     else if (FBoolProperty* BoolProperty = CastField<FBoolProperty>(Property))
     {
-        const bool NewState = CastField<FBoolProperty>(NewValue.Property)->GetPropertyValue(NewValue.ValuePtr);
+        const bool NewState = CastField<FBoolProperty>(NewValue.Property)->GetPropertyValue_InContainer(NewValue.ValuePtr);
         BoolProperty->SetPropertyValue(ValuePtr, NewState);
     }
     else if (FStrProperty* StringProperty = CastField<FStrProperty>(Property))
     {
-        FString NewString = CastField<FStrProperty>(NewValue.Property)->GetPropertyValue(NewValue.ValuePtr);
+        FString NewString = CastField<FStrProperty>(NewValue.Property)->GetPropertyValue_InContainer(NewValue.ValuePtr);
         StringProperty->SetPropertyValue(ValuePtr, NewString);
     }
     else if (FByteProperty* ByteProperty = CastField<FByteProperty>(Property))
     {
         ByteProperty->SetPropertyValue(ValuePtr,
-                                       CastField<FByteProperty>(NewValue.Property)->GetPropertyValue(
+                                       CastField<FByteProperty>(NewValue.Property)->GetPropertyValue_InContainer(
                                            NewValue.ValuePtr));
     }
     else if (FClassProperty* ClassProperty = CastField<FClassProperty>(Property))
     {
         ClassProperty->SetPropertyValue(ValuePtr,
-                                        CastField<FClassProperty>(NewValue.Property)->GetPropertyValue(
+                                        CastField<FClassProperty>(NewValue.Property)->GetPropertyValue_InContainer(
                                             NewValue.ValuePtr));
     }
     else if (FDelegateProperty* DelegateProperty = CastField<FDelegateProperty>(Property))
     {
         DelegateProperty->SetPropertyValue(ValuePtr,
-                                           CastField<FDelegateProperty>(NewValue.Property)->GetPropertyValue(
+                                           CastField<FDelegateProperty>(NewValue.Property)->GetPropertyValue_InContainer(
                                                NewValue.Property));
     }
     else if (FInterfaceProperty* InterfaceProperty = CastField<FInterfaceProperty>(Property))
     {
         InterfaceProperty->SetPropertyValue(ValuePtr,
-                                            CastField<FInterfaceProperty>(NewValue.Property)->GetPropertyValue(
+                                            CastField<FInterfaceProperty>(NewValue.Property)->GetPropertyValue_InContainer(
                                                 NewValue.Property));
     }
     else if (FNameProperty* NameProperty = CastField<FNameProperty>(Property))
     {
         NameProperty->SetPropertyValue(ValuePtr,
-                                       CastField<FNameProperty>(NewValue.Property)->GetPropertyValue(
+                                       CastField<FNameProperty>(NewValue.Property)->GetPropertyValue_InContainer(
                                            NewValue.Property));
     }
     else if (FObjectProperty* ObjectProperty = CastField<FObjectProperty>(Property))
     {
         ObjectProperty->SetPropertyValue(ValuePtr,
-                                         CastField<FObjectProperty>(NewValue.Property)->GetPropertyValue(
+                                         CastField<FObjectProperty>(NewValue.Property)->GetPropertyValue_InContainer(
                                              NewValue.Property));
-    }
-    else if (FTextProperty* TextProperty = CastField<FTextProperty>(Property))
-    {
     }
     else if (FArrayProperty* ArrayProperty = CastField<FArrayProperty>(Property))
     {
         ArrayProperty->SetPropertyValue(ValuePtr,
-                                        CastField<FArrayProperty>(NewValue.Property)->GetPropertyValue(
+                                        CastField<FArrayProperty>(NewValue.Property)->GetPropertyValue_InContainer(
                                             NewValue.Property));
     }
     else if (FMapProperty* MapProperty = CastField<FMapProperty>(Property))
     {
         MapProperty->SetPropertyValue(ValuePtr,
-                                      CastField<FMapProperty>(NewValue.Property)->GetPropertyValue(NewValue.Property));
+                                      CastField<FMapProperty>(NewValue.Property)->GetPropertyValue_InContainer(NewValue.Property));
     }
     else if (FSetProperty* SetProperty = CastField<FSetProperty>(Property))
     {
         SetProperty->SetPropertyValue(ValuePtr,
-                                      CastField<FSetProperty>(NewValue.Property)->GetPropertyValue(NewValue.Property));
+                                      CastField<FSetProperty>(NewValue.Property)->GetPropertyValue_InContainer(NewValue.Property));
     }
     else if (FStructProperty* StructProperty = CastField<FStructProperty>(Property))
     {
@@ -124,7 +122,7 @@ void UItemBase::SetProp(FProperty* Property, void* ValuePtr, FItemInnerProperty 
             15.0f,
             FColor::Yellow,
             FString::Printf(
-                TEXT("Unknown field %s of %s"),
+                TEXT("Field %s has unexpected type %s"),
                 *Property->GetAuthoredName(),
                 *Property->GetClass()->GetName()));
     }

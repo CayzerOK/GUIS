@@ -231,11 +231,12 @@
 /I Runtime\Experimental\GeometryCollectionSimulationCore\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
+/I C:\THProject\Plugins\NumbskullSerialization\Intermediate\Build\Win64\UE4Editor\Inc\NumbskullSerialization
+/I C:\THProject\Plugins\NumbskullSerialization\Source
+/I C:\THProject\Plugins\NumbskullSerialization\Source\NumbskullSerialization\Public
 /I C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Inc\GUIS
 /I C:\THProject\Plugins\GUIS\Source
 /I C:\THProject\Plugins\GUIS\Source\GUIS\Public
-/I C:\THProject\Plugins\GUIS\Source\ThirdParty
-/I C:\THProject\Plugins\GUIS\Source\ThirdParty\GUISLibrary
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf

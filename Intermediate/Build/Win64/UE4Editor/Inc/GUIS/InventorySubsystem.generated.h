@@ -15,20 +15,40 @@ class UStruct;
 #endif
 #define GUIS_InventorySubsystem_generated_h
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_SPARSE_DATA
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_RPC_WRAPPERS \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_37_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FGUISSaveData_Statics; \
+	GUIS_API static class UScriptStruct* StaticStruct();
+
+
+template<> GUIS_API UScriptStruct* StaticStruct<struct FGUISSaveData>();
+
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_19_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FItemSaveData_Statics; \
+	GUIS_API static class UScriptStruct* StaticStruct();
+
+
+template<> GUIS_API UScriptStruct* StaticStruct<struct FItemSaveData>();
+
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_SPARSE_DATA
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execGetItem); \
 	DECLARE_FUNCTION(execDecreaseItemCount); \
-	DECLARE_FUNCTION(execIncreaseItemCount);
+	DECLARE_FUNCTION(execIncreaseItemCount); \
+	DECLARE_FUNCTION(execLoadData); \
+	DECLARE_FUNCTION(execSaveData);
 
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetItem); \
 	DECLARE_FUNCTION(execDecreaseItemCount); \
-	DECLARE_FUNCTION(execIncreaseItemCount);
+	DECLARE_FUNCTION(execIncreaseItemCount); \
+	DECLARE_FUNCTION(execLoadData); \
+	DECLARE_FUNCTION(execSaveData);
 
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_INCLASS_NO_PURE_DECLS \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUInventorySubsystem(); \
 	friend struct Z_Construct_UClass_UInventorySubsystem_Statics; \
@@ -37,7 +57,7 @@ public: \
 	DECLARE_SERIALIZER(UInventorySubsystem)
 
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_INCLASS \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_INCLASS \
 private: \
 	static void StaticRegisterNativesUInventorySubsystem(); \
 	friend struct Z_Construct_UClass_UInventorySubsystem_Statics; \
@@ -46,7 +66,7 @@ public: \
 	DECLARE_SERIALIZER(UInventorySubsystem)
 
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_STANDARD_CONSTRUCTORS \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UInventorySubsystem(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UInventorySubsystem) \
@@ -59,7 +79,7 @@ private: \
 public:
 
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_ENHANCED_CONSTRUCTORS \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UInventorySubsystem() { }; \
 private: \
@@ -72,31 +92,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UInventorySubsystem); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UInventorySubsystem)
 
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_PRIVATE_PROPERTY_OFFSET \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ItemMap() { return STRUCT_OFFSET(UInventorySubsystem, ItemMap); }
 
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_12_PROLOG
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_GENERATED_BODY_LEGACY \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_56_PROLOG
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_PRIVATE_PROPERTY_OFFSET \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_SPARSE_DATA \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_RPC_WRAPPERS \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_INCLASS \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_STANDARD_CONSTRUCTORS \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_PRIVATE_PROPERTY_OFFSET \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_SPARSE_DATA \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_RPC_WRAPPERS \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_INCLASS \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_GENERATED_BODY \
+#define THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_PRIVATE_PROPERTY_OFFSET \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_SPARSE_DATA \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_INCLASS_NO_PURE_DECLS \
-	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_15_ENHANCED_CONSTRUCTORS \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_PRIVATE_PROPERTY_OFFSET \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_SPARSE_DATA \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_RPC_WRAPPERS_NO_PURE_DECLS \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_INCLASS_NO_PURE_DECLS \
+	THProject_Plugins_GUIS_Source_GUIS_Public_InventorySubsystem_h_59_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

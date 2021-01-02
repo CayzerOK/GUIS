@@ -3,15 +3,15 @@
 	{
 		"Module.GUIS.cpp.obj": [
 			"GUIS.cpp.obj",
-			"ItemBase.cpp.obj",
 			"InventoryComponent.cpp.obj",
-			"InventorySubsystem.cpp.obj"
+			"InventorySubsystem.cpp.obj",
+			"ItemBase.cpp.obj"
 		],
 		"Module.GUIS.gen.cpp.obj": [
-			"ItemBase.gen.cpp.obj",
 			"GUIS.init.gen.cpp.obj",
 			"InventoryComponent.gen.cpp.obj",
-			"InventorySubsystem.gen.cpp.obj"
+			"InventorySubsystem.gen.cpp.obj",
+			"ItemBase.gen.cpp.obj"
 		]
 	}
 }

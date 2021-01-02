@@ -73,6 +73,12 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 protected:
+	
 	virtual void BeginPlay() override;
 	
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void ItemAdded(UItemBase* Item, int32 Amount);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    void ItemRemoved(UItemBase* Item, int32 Amount);
 };

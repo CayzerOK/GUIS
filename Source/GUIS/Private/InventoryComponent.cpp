@@ -14,6 +14,16 @@ void UInventoryComponent::BeginPlay()
 	InventorySubsystem = GetWorld()->GetGameInstance()->GetSubsystem<UInventorySubsystem>();
 }
 
+void UInventoryComponent::ItemAdded_Implementation(UItemBase* Item, int32 Amount)
+{
+	
+}
+
+void UInventoryComponent::ItemRemoved_Implementation(UItemBase* Item, int32 Amount)
+{
+	
+}
+
 void UInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
@@ -29,7 +39,7 @@ TArray<FItemSlotInfo> UInventoryComponent::GetContent()
 	{
 		FItemSlotInfo SlotInfo;
 
-		if (UItemBase* FoundedItem = FindObject<UItemBase>(GetWorld()->GetGameInstance(), *FString::Printf(TEXT("Item_%llu"), Slot.ItemID), false))
+		if (UItemBase* FoundedItem = InventorySubsystem->GetItem(Slot.ItemID))
 		{
 			SlotInfo.Item = FoundedItem;
 			SlotInfo.Count = Slot.Count;
@@ -54,6 +64,7 @@ void UInventoryComponent::AddItems(UItemBase* Item, int32 Amount)
 		NewSlot.ItemID = Item->ItemID;
 		NewSlot.Count = Amount;
 		InnerContent.Add(NewSlot);
+		ItemAdded(Item,Amount);
 	}
 
 	InventorySubsystem->IncreaseItemCount(Item, Amount);
@@ -74,6 +85,7 @@ void UInventoryComponent::RemoveItems(UItemBase* Item, int32 Amount)
 			InventorySubsystem->IncreaseItemCount(Item, Slot->Count);
 			InnerContent.Remove(*Slot);
 		}
+		ItemRemoved(Item,Amount);
 	}
 	return;
 }
