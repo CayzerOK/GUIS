@@ -338,13 +338,13 @@ static struct FScriptStruct_GUIS_StaticRegisterNativesFItemInnerProperty
 		{ "ModuleRelativePath", "Public/ItemBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_UItemBase_Statics::NewProp_Count = { "Count", nullptr, (EPropertyFlags)0x0010000001000000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UItemBase, Count), METADATA_PARAMS(Z_Construct_UClass_UItemBase_Statics::NewProp_Count_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UItemBase_Statics::NewProp_Count_MetaData)) };
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_UItemBase_Statics::NewProp_Count = { "Count", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UItemBase, Count), METADATA_PARAMS(Z_Construct_UClass_UItemBase_Statics::NewProp_Count_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UItemBase_Statics::NewProp_Count_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UItemBase_Statics::NewProp_ItemID_MetaData[] = {
 		{ "ModuleRelativePath", "Public/ItemBase.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_UItemBase_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000001000000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UItemBase, ItemID), METADATA_PARAMS(Z_Construct_UClass_UItemBase_Statics::NewProp_ItemID_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UItemBase_Statics::NewProp_ItemID_MetaData)) };
+	const UE4CodeGen_Private::FUInt32PropertyParams Z_Construct_UClass_UItemBase_Statics::NewProp_ItemID = { "ItemID", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::UInt32, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UItemBase, ItemID), METADATA_PARAMS(Z_Construct_UClass_UItemBase_Statics::NewProp_ItemID_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UItemBase_Statics::NewProp_ItemID_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UItemBase_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UItemBase_Statics::NewProp_Count,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UItemBase_Statics::NewProp_ItemID,
@@ -376,7 +376,7 @@ static struct FScriptStruct_GUIS_StaticRegisterNativesFItemInnerProperty
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UItemBase, 444883778);
+	IMPLEMENT_CLASS(UItemBase, 106394913);
 	template<> GUIS_API UClass* StaticClass<UItemBase>()
 	{
 		return UItemBase::StaticClass();

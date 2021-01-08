@@ -32,12 +32,12 @@ template<> GUIS_API UScriptStruct* StaticStruct<struct FItemSlot>();
 
 #define THProject_Plugins_GUIS_Source_GUIS_Public_InventoryComponent_h_46_SPARSE_DATA
 #define THProject_Plugins_GUIS_Source_GUIS_Public_InventoryComponent_h_46_RPC_WRAPPERS \
-	virtual void ItemRemoved_Implementation(UItemBase* Item, int32 Amount); \
-	virtual void ItemAdded_Implementation(UItemBase* Item, int32 Amount); \
+	virtual void ItemsRemoved_Implementation(UItemBase* Item, int32 Amount); \
+	virtual void ItemsAdded_Implementation(UItemBase* Item, int32 Amount); \
 	virtual bool CanAccept_Implementation(UItemBase* Item, int32 Amount); \
  \
-	DECLARE_FUNCTION(execItemRemoved); \
-	DECLARE_FUNCTION(execItemAdded); \
+	DECLARE_FUNCTION(execItemsRemoved); \
+	DECLARE_FUNCTION(execItemsAdded); \
 	DECLARE_FUNCTION(execCanAccept); \
 	DECLARE_FUNCTION(execIsContain); \
 	DECLARE_FUNCTION(execTransactTo); \
@@ -47,12 +47,12 @@ template<> GUIS_API UScriptStruct* StaticStruct<struct FItemSlot>();
 
 
 #define THProject_Plugins_GUIS_Source_GUIS_Public_InventoryComponent_h_46_RPC_WRAPPERS_NO_PURE_DECLS \
-	virtual void ItemRemoved_Implementation(UItemBase* Item, int32 Amount); \
-	virtual void ItemAdded_Implementation(UItemBase* Item, int32 Amount); \
+	virtual void ItemsRemoved_Implementation(UItemBase* Item, int32 Amount); \
+	virtual void ItemsAdded_Implementation(UItemBase* Item, int32 Amount); \
 	virtual bool CanAccept_Implementation(UItemBase* Item, int32 Amount); \
  \
-	DECLARE_FUNCTION(execItemRemoved); \
-	DECLARE_FUNCTION(execItemAdded); \
+	DECLARE_FUNCTION(execItemsRemoved); \
+	DECLARE_FUNCTION(execItemsAdded); \
 	DECLARE_FUNCTION(execCanAccept); \
 	DECLARE_FUNCTION(execIsContain); \
 	DECLARE_FUNCTION(execTransactTo); \
@@ -74,12 +74,12 @@ template<> GUIS_API UScriptStruct* StaticStruct<struct FItemSlot>();
 		{ \
 		} \
 	}; \
-	struct InventoryComponent_eventItemAdded_Parms \
+	struct InventoryComponent_eventItemsAdded_Parms \
 	{ \
 		UItemBase* Item; \
 		int32 Amount; \
 	}; \
-	struct InventoryComponent_eventItemRemoved_Parms \
+	struct InventoryComponent_eventItemsRemoved_Parms \
 	{ \
 		UItemBase* Item; \
 		int32 Amount; \
@@ -130,7 +130,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UInventoryComponent); \
 
 
 #define THProject_Plugins_GUIS_Source_GUIS_Public_InventoryComponent_h_46_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__InnerContent() { return STRUCT_OFFSET(UInventoryComponent, InnerContent); }
+	FORCEINLINE static uint32 __PPO__InnerContent() { return STRUCT_OFFSET(UInventoryComponent, InnerContent); } \
+	FORCEINLINE static uint32 __PPO__InventorySubsystem() { return STRUCT_OFFSET(UInventoryComponent, InventorySubsystem); }
 
 
 #define THProject_Plugins_GUIS_Source_GUIS_Public_InventoryComponent_h_43_PROLOG \

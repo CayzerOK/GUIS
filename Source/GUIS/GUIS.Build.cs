@@ -26,7 +26,6 @@ public class GUIS : ModuleRules
             {
                 "Core",
                 "Projects",
-                "NumbskullSerialization"
             }
         );
 
@@ -38,7 +37,6 @@ public class GUIS : ModuleRules
                 "Engine",
                 "Slate",
                 "SlateCore",
-                "NumbskullSerialization"
             }
         );
 

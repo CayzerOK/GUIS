@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 
 
-#include "InventorySubsystem.h"
+#include "GUISSubsystem.h"
 #include "ItemBase.h"
 #include "Components/ActorComponent.h"
 #include "InventoryComponent.generated.h"
@@ -47,7 +47,8 @@ class GUIS_API UInventoryComponent : public UActorComponent
 
 	UPROPERTY(SaveGame)
 	TArray<FItemSlot> InnerContent;
-	UInventorySubsystem* InventorySubsystem;
+	UPROPERTY()
+	UGUIS* InventorySubsystem;
 	
 public:	
 	UInventoryComponent();
@@ -76,9 +77,9 @@ protected:
 	
 	virtual void BeginPlay() override;
 	
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void ItemAdded(UItemBase* Item, int32 Amount);
+	UFUNCTION(BlueprintNativeEvent)
+    void ItemsAdded(UItemBase* Item, int32 Amount);
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    void ItemRemoved(UItemBase* Item, int32 Amount);
+	UFUNCTION(BlueprintNativeEvent)
+    void ItemsRemoved(UItemBase* Item, int32 Amount);
 };

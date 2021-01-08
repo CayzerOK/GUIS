@@ -231,9 +231,6 @@
 /I Runtime\Experimental\GeometryCollectionSimulationCore\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I F:\THProject\Plugins\NumbskullSerialization\Intermediate\Build\Win64\UE4Editor\Inc\NumbskullSerialization
-/I F:\THProject\Plugins\NumbskullSerialization\Source
-/I F:\THProject\Plugins\NumbskullSerialization\Source\NumbskullSerialization\Public
 /I F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Inc\GUIS
 /I F:\THProject\Plugins\GUIS\Source
 /I F:\THProject\Plugins\GUIS\Source\GUIS\Public

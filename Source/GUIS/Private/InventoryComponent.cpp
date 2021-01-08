@@ -11,15 +11,15 @@ UInventoryComponent::UInventoryComponent()
 void UInventoryComponent::BeginPlay()
 {
 	Super::BeginPlay();
-	InventorySubsystem = GetWorld()->GetGameInstance()->GetSubsystem<UInventorySubsystem>();
+	InventorySubsystem = GetWorld()->GetGameInstance()->GetSubsystem<UGUIS>();
 }
 
-void UInventoryComponent::ItemAdded_Implementation(UItemBase* Item, int32 Amount)
+void UInventoryComponent::ItemsAdded_Implementation(UItemBase* Item, int32 Amount)
 {
 	
 }
 
-void UInventoryComponent::ItemRemoved_Implementation(UItemBase* Item, int32 Amount)
+void UInventoryComponent::ItemsRemoved_Implementation(UItemBase* Item, int32 Amount)
 {
 	
 }
@@ -55,39 +55,45 @@ TArray<FItemSlotInfo> UInventoryComponent::GetContent()
 
 void UInventoryComponent::AddItems(UItemBase* Item, int32 Amount)
 {
-	if(FItemSlot* Slot = InnerContent.FindByPredicate([&](FItemSlot Result) {return Item->ItemID == Result.ItemID; }))
+	if(IsValid(Item))
 	{
-		Slot->Count += Amount;
-	} else
-	{
-		FItemSlot NewSlot;
-		NewSlot.ItemID = Item->ItemID;
-		NewSlot.Count = Amount;
-		InnerContent.Add(NewSlot);
-		ItemAdded(Item,Amount);
-	}
+		if(FItemSlot* Slot = InnerContent.FindByPredicate([&](FItemSlot Result) {return Item->ItemID == Result.ItemID; }))
+		{
+			Slot->Count += Amount;
+		} else
+		{
+			FItemSlot NewSlot;
+			NewSlot.ItemID = Item->ItemID;
+			NewSlot.Count = Amount;
+			InnerContent.Add(NewSlot);
+		}
 
-	InventorySubsystem->IncreaseItemCount(Item, Amount);
-	return;
+		InventorySubsystem->IncreaseItemCount(Item, Amount);
+		ItemsAdded(Item,Amount);
+		return;
+	}
 }
 
 void UInventoryComponent::RemoveItems(UItemBase* Item, int32 Amount)
 {
-	if(FItemSlot* Slot = InnerContent.FindByPredicate([&](FItemSlot Result) { return Item->ItemID == Result.ItemID; }))
+	if(IsValid(Item))
 	{
-		if(Slot->Count>Amount)
+		if(FItemSlot* Slot = InnerContent.FindByPredicate([&](FItemSlot Result) { return Item->ItemID == Result.ItemID; }))
 		{
-			InventorySubsystem->IncreaseItemCount(Item, Amount);
-			Slot->Count -= Amount;
+			if(Slot->Count>Amount)
+			{
+				InventorySubsystem->IncreaseItemCount(Item, Amount);
+				Slot->Count -= Amount;
+			}
+			else
+			{
+				InventorySubsystem->IncreaseItemCount(Item, Slot->Count);
+				InnerContent.Remove(*Slot);
+			}
+			ItemsRemoved(Item,Amount);
 		}
-		else
-		{
-			InventorySubsystem->IncreaseItemCount(Item, Slot->Count);
-			InnerContent.Remove(*Slot);
-		}
-		ItemRemoved(Item,Amount);
+		return;
 	}
-	return;
 }
 
 bool UInventoryComponent::TransactTo(UItemBase* Item, int32 Amount, UInventoryComponent* To)

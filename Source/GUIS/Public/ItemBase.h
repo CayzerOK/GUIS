@@ -47,13 +47,13 @@ class GUIS_API UItemBase : public UObject
     GENERATED_BODY()
 private:
 
-    void SetProp(FProperty* Property, void* Dest, FItemInnerProperty NewValue);
+    void SetProp(FProperty* Property, void* Dest, FItemInnerProperty NewValue) const;
 
 public:
-    UPROPERTY(SaveGame)
+    UPROPERTY()
     uint32 ItemID = 0;
     
-    UPROPERTY(SaveGame)
+    UPROPERTY()
     uint32 Count = 0;
 
     UFUNCTION()

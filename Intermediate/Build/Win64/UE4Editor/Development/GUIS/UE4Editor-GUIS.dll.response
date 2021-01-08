@@ -34,6 +34,9 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "F:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\GUISSubsystem.cpp.obj"
+"F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\InventoryComponent.cpp.obj"
+"F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\ItemBase.cpp.obj"
 "F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.cpp.obj"
 "F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.gen.cpp.obj"
 "F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Default.rc2.res"
@@ -65,7 +68,6 @@
 "E:\UnrealGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
 "E:\UnrealGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Slate\UE4Editor-Slate.lib"
 "E:\UnrealGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\SlateCore\UE4Editor-SlateCore.lib"
-"F:\THProject\Plugins\NumbskullSerialization\Intermediate\Build\Win64\UE4Editor\Development\NumbskullSerialization\UE4Editor-NumbskullSerialization.lib"
 "E:\UnrealGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
 "E:\UnrealGames\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Projects\UE4Editor-Projects.lib"
 /OUT:"F:\THProject\Plugins\GUIS\Binaries\Win64\UE4Editor-GUIS.dll"

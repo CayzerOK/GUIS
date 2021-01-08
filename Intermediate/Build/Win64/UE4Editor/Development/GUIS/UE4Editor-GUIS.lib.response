@@ -7,6 +7,9 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "F:\THProject\Intermediate\Build\Win64\THProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\GUISSubsystem.cpp.obj"
+"F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\InventoryComponent.cpp.obj"
+"F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\ItemBase.cpp.obj"
 "F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.cpp.obj"
 "F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Module.GUIS.gen.cpp.obj"
 "F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Default.rc2.res"

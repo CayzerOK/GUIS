@@ -1,7 +1,0 @@
-C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Definitions.GUIS.h
-F:\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-F:\EpicGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\THProject\Plugins\GUIS\Source\GUIS/Public/InventoryProxy.h
-C:\THProject\Plugins\GUIS\Source\GUIS\Public\ItemBase.h
-C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Inc\GUIS\ItemBase.generated.h
-C:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Inc\GUIS\InventoryProxy.generated.h
