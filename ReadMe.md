@@ -32,3 +32,6 @@ Now you can do whatever you want with your object! You can add it to your invent
 # Additional Info:
 
 Coming soon....
+
+### See also:
+[Manufacture](https://github.com/CayzerOK/Manufacture_Core) - Item Production Plugin based on GUIS
