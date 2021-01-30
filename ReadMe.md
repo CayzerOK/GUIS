@@ -1,6 +1,6 @@
 ﻿# GUIS
 
-GUIS (General Universal Item System) is flexible performance-friendly and super-universal system, that can help you build true RNG-items.
+GUIS (General Universal Item System) is flexible performance-friendly and super-universal item and inventory system for your singleplayer game.
 
 # BASIC USAGE:
 
@@ -33,5 +33,7 @@ Now you can do whatever you want with your object! You can add it to your invent
 
 Coming soon....
 
-### See also:
-[Manufacture](https://github.com/CayzerOK/Manufacture_Core) - Item Production Plugin based on GUIS
+### GUIS Family:
+[GUIS_Manufacture](https://github.com/CayzerOK/Manufacture_Core) - item production plugin based on GUIS
+--GUIS_Rand - random item generation--
+--GUIS_Attributes - feature-rich effect system for your items--
