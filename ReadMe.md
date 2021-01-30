@@ -35,5 +35,7 @@ Coming soon....
 
 ### GUIS Family:
 [GUIS_Manufacture](https://github.com/CayzerOK/Manufacture_Core) - item production plugin based on GUIS
---GUIS_Rand - random item generation--
---GUIS_Attributes - feature-rich effect system for your items--
+
+~~GUIS_Rand - random item generation~~
+
+~~GUIS_Attributes - feature-rich effect system for your items~~
