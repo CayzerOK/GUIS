@@ -1,3 +1,0 @@
-F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Definitions.GUIS.h
-F:/THProject/Plugins/GUIS/Source/GUIS/Private/GUIS.cpp
-F:\THProject\Plugins\GUIS\Source\GUIS\Public\GUIS.h

@@ -1,3 +1,0 @@
-F:\THProject\Plugins\GUIS\Intermediate\Build\Win64\UE4Editor\Development\GUIS\Definitions.GUIS.h
-E:\UnrealGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-E:\UnrealGames\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h

@@ -1,0 +1,30 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "GUIS_Core",
+	"Description": "General Universal Item System::Core ",
+	"Category": "Other",
+	"CreatedBy": "NickTsaizer",
+	"CreatedByURL": "https://github.com/CayzerOK",
+	"DocsURL": "https://github.com/CayzerOK/GUIS",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/5ac3396ca70340f8be707777c419cd68",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"EngineVersion" : "4.25.0",
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "GUIS_Core",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32",
+				"Linux"
+			]
+		}
+	]
+}
