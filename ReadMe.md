@@ -9,4 +9,5 @@ GUIS (General Universal Item System) is flexible performance-friendly and super-
 
 ~~GUIS_Attributes - feature-rich effect system for your items~~
 
-##Learn [Wiki](https://github.com/NickTsaizer/GUIS_Core/wiki/%23-GUIS)!
+# How to:
+Learn [Wiki](https://github.com/NickTsaizer/GUIS_Core/wiki/%23-GUIS)!
