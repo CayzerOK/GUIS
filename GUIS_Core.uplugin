@@ -24,6 +24,9 @@
 				"Win64",
 				"Win32",
 				"Linux"
+			],
+			"AdditionalDependencies": [
+				"Engine"
 			]
 		}
 	]

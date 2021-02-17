@@ -19,6 +19,38 @@ bool UGameItem::LoadData(TMap<FString, FItemInnerProperty> PropMap)
     return true;
 }
 
+float UGameItem::Compare(UGameItem* Other)
+{
+    UClass* ThisClass = this->GetClass();
+    UClass* OtherClass = Other->GetClass();
+
+    float Dot = 0;
+    float ThisDenominator = 0;
+    float OtherDenominator = 0;
+
+    if (ThisClass != OtherClass)
+    {
+        return 0;
+    }
+
+    TArray<float> ThisMetrics = this->GetMetrics();
+    TArray<float> OtherMetrics = Other->GetMetrics();
+    
+    for(int32 Index = 0; Index<ThisMetrics.Num(); Index++)
+    {
+        Dot += ThisMetrics[Index]*OtherMetrics[Index];
+        OtherDenominator += pow(OtherMetrics[Index], 2);
+        ThisDenominator += pow(ThisMetrics[Index], 2);
+    }
+    
+    return Dot / (sqrt(ThisDenominator) * sqrt(OtherDenominator));
+}
+
+TArray<float> UGameItem::GetMetrics_Implementation()
+{
+    return {};
+}
+
 void UGameItem::SetProp(FProperty* Property, void* ValuePtr, FItemInnerProperty NewValue) const
 {
     if (FNumericProperty* NumericProperty = CastField<FNumericProperty>(Property))
@@ -91,10 +123,17 @@ void UGameItem::SetProp(FProperty* Property, void* ValuePtr, FItemInnerProperty 
         }
     }
     else if (FArrayProperty* ArrayProperty = CastField<FArrayProperty>(Property))
-    {
-        ArrayProperty->SetPropertyValue(ValuePtr,
-                                        CastField<FArrayProperty>(NewValue.Property)->GetPropertyValue(
-                                            NewValue.Property));
+    {        
+        FArrayProperty* NewArrayProperty = CastField<FArrayProperty>(NewValue.Property);
+        
+        FScriptArrayHelper ArrayHelper(ArrayProperty, ValuePtr);
+        FScriptArrayHelper NewArrayHelper(NewArrayProperty, NewValue.ValuePtr);
+
+        ArrayHelper.EmptyValues();
+        
+        ArrayHelper.Resize(NewArrayHelper.Num());
+        ArrayHelper.MoveAssign(NewValue.ValuePtr);
+        
     }
     else if (FMapProperty* MapProperty = CastField<FMapProperty>(Property))
     {

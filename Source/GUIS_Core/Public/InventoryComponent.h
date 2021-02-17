@@ -10,11 +10,11 @@
 #include "InventoryComponent.generated.h"
 
 USTRUCT()
-struct FItemSlot
+struct FItemSlotInfo
 {
 	GENERATED_BODY()
 
-	bool operator==(const FItemSlot& Other) const
+	bool operator==(const FItemSlotInfo& Other) const
 	{
 		return Other.ItemID == ItemID;
 	}
@@ -23,11 +23,11 @@ struct FItemSlot
 	UPROPERTY(SaveGame)
 	int32 Count;
 	UPROPERTY(SaveGame)
-	uint32 ChildInvID = NULL;
+	TMap<FName, float> MetaData;
 };
 
 USTRUCT(BlueprintType)
-struct FItemSlotInfo
+struct FItemSlot
 {
 	GENERATED_BODY()
 
@@ -45,34 +45,56 @@ class GUIS_CORE_API UInventoryComponent : public UActorComponent
 	GENERATED_BODY()
 
 	UPROPERTY(SaveGame)
-	TArray<FItemSlot> InnerContent;
+	TArray<FItemSlotInfo> InnerContent;
 	UPROPERTY()
 	UGUIS* InventorySubsystem;
 	
-	public:	
+public:
+
+	UPROPERTY(SaveGame, BlueprintReadWrite, EditAnywhere, Category = "Inventory")
+	TSubclassOf<UGameItem> FilterClass = UGameItem::StaticClass();
+	
 	UInventoryComponent();
 
-	UFUNCTION(BlueprintCallable)
-    TArray<FItemSlotInfo>GetContent();
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+    TArray<FItemSlot>GetContent();
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+    TArray<FItemSlot>GetAllItemsOfClass(TSubclassOf<UGameItem> ItemClass);
  
-	UFUNCTION(BlueprintCallable)
-    void AddItems(UGameItem* Item, int32 Amount);
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+    void ForceAddItems(UGameItem* Item, int32 Amount);
+    
+    UFUNCTION(BlueprintCallable, Category = "Inventory")
+    bool AddItems(UGameItem* Item, int32 Amount);
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory.Meta")
+    bool SetItemMeta(UGameItem* Item, FName MetaField, float Value);
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory.Meta")
+    bool RemoveItemMeta(UGameItem* Item, FName MetaField);
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory.Meta")
+    TMap<FName, float> GetItemMeta(UGameItem* Item);
  
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
     void RemoveItems(UGameItem* Item, int32 Amount);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
     bool TransactTo(UGameItem* Item, int32 Amount, UInventoryComponent* To);
 	
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
     bool IsContain(UGameItem* Item, int32 Amount);
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	UFUNCTION(BlueprintCallable, Category = "Inventory")
+    void SetFilter(TSubclassOf<UGameItem> ItemClass);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Inventory")
     bool CanAccept(UGameItem* Item, int32 Amount);
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	protected:
+protected:
 	
 	virtual void BeginPlay() override;
 	

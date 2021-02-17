@@ -3,8 +3,10 @@
 #pragma once
 
 #include "Core.h"
-#include "UObject/NoExportTypes.h"
 #include "GameItem.generated.h"
+
+class UGameItem;
+
 USTRUCT()
 struct FItemInnerProperty
 {
@@ -14,6 +16,14 @@ struct FItemInnerProperty
 	void* ValuePtr;
 };
 
+USTRUCT(BlueprintType)
+struct FItemStruct
+{
+	GENERATED_BODY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<UGameItem> ItemClass;
+	
+};
 
 UENUM(BlueprintType)
 enum EEquipmentsSlot
@@ -44,8 +54,6 @@ UCLASS(Blueprintable, BlueprintType)
 class GUIS_CORE_API UGameItem : public UObject
 {
 	GENERATED_BODY()
-	private:
-
 	void SetProp(FProperty* Property, void* Dest, FItemInnerProperty NewValue) const;
 
 	public:
@@ -57,4 +65,11 @@ class GUIS_CORE_API UGameItem : public UObject
 
 	UFUNCTION()
     bool LoadData(TMap<FString, FItemInnerProperty> PropMap);
+
+	UFUNCTION(BlueprintCallable)
+	float Compare(UGameItem* Other);
+
+	UFUNCTION(BlueprintNativeEvent)
+	TArray<float> GetMetrics();
 };
+
