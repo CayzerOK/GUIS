@@ -5,6 +5,8 @@ GUIS (General Universal Item System) is flexible performance-friendly and super-
 ### GUIS Family:
 [WIP][GUIS_Manufacture](https://github.com/CayzerOK/Manufacture_Core) - item production plugin based on GUIS
 
+[WIP]GUIS_Commerce - Free market? Free market!
+
 ~~GUIS_Rand - random item generation~~
 
 ~~GUIS_Attributes - feature-rich effect system for your items~~
